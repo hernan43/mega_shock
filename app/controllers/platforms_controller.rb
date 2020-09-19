@@ -70,6 +70,6 @@ class PlatformsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def platform_params
-      params.require(:platform).permit(:name, :slug, :year, :is_hidden)
+      params.require(:platform).permit(:name, :slug, :year, :external_id, :is_hidden)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_19_200934) do
+ActiveRecord::Schema.define(version: 2020_09_19_205642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_09_19_200934) do
     t.boolean "is_hidden"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "external_id"
+    t.index ["external_id"], name: "index_platforms_on_external_id"
     t.index ["is_hidden"], name: "index_platforms_on_is_hidden"
     t.index ["name"], name: "index_platforms_on_name", unique: true
     t.index ["slug"], name: "index_platforms_on_slug", unique: true
