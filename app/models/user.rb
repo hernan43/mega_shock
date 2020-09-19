@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :lockable, :trackable
 
+  validates :email, presence: true
+
   def fullname
     return first_name if not first_name.blank? and last_name.blank?
     return last_name if not last_name.blank? and first_name.blank?
