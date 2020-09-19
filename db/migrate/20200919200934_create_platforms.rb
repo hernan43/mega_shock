@@ -8,5 +8,9 @@ class CreatePlatforms < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    create_index :plaforms, :name, unique: true
+    create_index :plaforms, :slug, unique: true
+    create_index :plaforms, :is_hidden, unique: false
   end
 end
