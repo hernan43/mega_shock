@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_19_200036) do
+ActiveRecord::Schema.define(version: 2020_09_19_200934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "platforms", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.string "year"
+    t.boolean "is_hidden"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["is_hidden"], name: "index_platforms_on_is_hidden"
+    t.index ["name"], name: "index_platforms_on_name", unique: true
+    t.index ["slug"], name: "index_platforms_on_slug", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", default: "", null: false
