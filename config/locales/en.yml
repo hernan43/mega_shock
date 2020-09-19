@@ -30,4 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  change_password: Change your password
+  edit_user_account: Edit your account
   mega_shock: Mega Shock
+  profile: Profile
+  signup_login: Signup / Login
