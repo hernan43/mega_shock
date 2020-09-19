@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :platforms
   devise_for :users
 
   get '/profile', to: 'users#profile', as: 'user_profile'

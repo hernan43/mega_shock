@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @platform.name %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @platform.slug %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @platform.year %>
+</p>
+
+<p>
+  <strong>Is hidden:</strong>
+  <%= @platform.is_hidden %>
+</p>
+
+<%= link_to 'Edit', edit_platform_path(@platform) %> |
+<%= link_to 'Back', platforms_path %>
