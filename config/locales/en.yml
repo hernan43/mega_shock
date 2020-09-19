@@ -31,6 +31,7 @@
 
 en:
   change_password: Change your password
+  editing_profile: Editing profile for %{name}
   edit_user_account: Edit your account
   mega_shock: Mega Shock
   profile: Profile
