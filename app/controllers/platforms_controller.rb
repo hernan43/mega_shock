@@ -1,4 +1,5 @@
 class PlatformsController < ApplicationController
+  before_action :require_signed_in_as_admin!
   before_action :set_platform, only: [:show, :edit, :update, :destroy]
 
   # GET /platforms
